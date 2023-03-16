@@ -1,0 +1,17 @@
+<div class="egreso">
+  <h2 class="egreso_titulo">Egresos</h2>
+  <div *ngFor="let item of egresos;let i = index">
+    <div class="elemento limpiarEstilos">
+      <div class="elemento_descripcion">{{ item.descripcion }}</div>
+      <div class="right limpiarEstilos">
+        <div class="elemento_valor">- {{ item.monto | currency }}</div>
+        <div class="elemento_porcentaje">{{porcentaje(item.monto)}}%</div>
+        <div class="elemento_eliminar">
+          <button class="elemento_eliminar--btn" (click)="eliminar(item)">
+            <i class="ion-ios-close-outline"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+
+<app-cabecero   [ingresos]="getIngresoTotal()" [egresos]="getEgresoTotal()"></app-cabecero>
+
+
+<app-formulario></app-formulario>
+
+
+  <div class="contenedor limpiarEstilos">
+      <app-ingresos></app-ingresos>
+
+
+
+      <app-egresos [sumIngresos]="getIngresoTotal()"></app-egresos>
+  </div>
